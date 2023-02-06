@@ -15,7 +15,7 @@
 <body>
 <div class="container grid">
   <div class="scrum-board flex-col backlog">
-    <input type="submit" id="modalBtn" class="btn btn-green" value="<?php $_SESSION['user_nombre']; ?>">
+    <input type="submit" id="modalBtn" class="btn btn-green" value="<?php echo $_SESSION['user_nombre']; ?>">
     <a href="<?php echo URLROOT;?>/users/logout" class="btn btn-green"> Cerrar SESSION</a>
     <h2>Proyecto: LXDE Blog</h2>
 
