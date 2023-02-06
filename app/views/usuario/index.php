@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="stylesheet" href="scrum.css"> -->
-  <link rel="stylesheet" href="<?php echo URLROOT; ?>/basic.css">
-  <link rel="stylesheet" href="<?php echo URLROOT; ?>/util.css">
+  <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/basic.css">
+  <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/util.css">
   <!-- <script src="app.js"></script> -->
 
 
