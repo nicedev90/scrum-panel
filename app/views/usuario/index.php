@@ -15,7 +15,7 @@
 <body>
 <div class="container grid">
   <div class="scrum-board flex-col backlog">
-
+    <a href="<?php echo URLROOT;?>/users/logout" class="btn btn-green"> Cerrar SESSION</a>
     <h2>Proyecto: LXDE Blog</h2>
 
     <div class="flex">
