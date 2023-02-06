@@ -1,0 +1,271 @@
+:root {
+  --btn-text: #fff;
+  --btn-add: #3366aa;
+  --btn-backlog: #4e73df;
+  --btn-progress: #f6c23e;
+  --btn-done: #1cc88a;
+  --btn-delete: #e74a3b;
+  --border-card: #ccc;
+  --card-bg: #f1f1f1;
+
+    --sidebar-bgColor: #242e42;
+  --sidebar-bgColor-hover: #1d2636;
+  --sidebar-txtColor: #dde9f8;
+  --sidebar-headingColor: #7889a4;
+  --page-content-bgColor: #f0f1f6;
+  --page-content-txtColor: #171616;
+  --page-content-blockColor: #fff;
+  --white: #fff;
+  --black: #333;
+  --blue: #00b9eb;
+  --red: #ec1848;
+  --border-radius: 4px;
+  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
+  --switch-bgLightModeColor: #87cefa;
+  --switch-sunColor: gold;
+  --switch-moonColor: #f4f4f4;
+  --switch-bgDarkModeColor: #1f1f27;
+
+  --card-text: #333;
+  --card-bg: #fff;
+  --primary-color: #047aed;
+  --secondary-color: #1c4fa8;
+  --dark-color: #002440;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534c;
+  
+  --border-card: #ccc;
+
+  --card-height: 200px;
+
+    /* buttons */
+  --btn-blue: #0693e3;
+  --btn-blue-text: #f4f4f4;
+  --btn-blue-hover: #12879C;
+  --btn-green: #5cb85c;
+  --btn-green-text: #f4f4f4;
+  --btn-green-hover: #58AD69;
+  --btn-red: #E2574C;
+  --btn-red-text: #f4f4f4;
+  --btn-red-hover: #cf2e2e;
+  --btn-dark: #212121;
+  --btn-dark-text: #f4f4f4;
+  --btn-dark-hover: #757575;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+img {
+  width: 100%;
+}
+
+code, pre {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.scrum-board{
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid var(--border-card);
+  font-size: 0.8em;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: start;
+  padding: 0 10px;
+  font-size: 0.8em;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.card-footer svg {
+  width: 30px;
+  height: 30px;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.small {
+  width: 120px;
+}
+
+.btn-green {
+  background: var(--btn-green);
+  color: var(--btn-green-text);
+}
+
+.btn-green:hover {
+  background: var(--btn-green-hover);
+}
+
+.btn-blue {
+  background: var(--btn-blue);
+  color: var(--btn-blue-text);
+}
+
+.btn-blue:hover {
+  background: var(--btn-blue-hover);
+}
+
+.btn-red {
+  background: var(--btn-red);
+  color: var(--btn-red-text);
+}
+
+.btn-red:hover {
+  background: var(--btn-red-hover);
+}
+
+.btn-dark {
+  background: var(--btn-dark);
+  color: var(--btn-dark-text);
+}
+
+.btn-dark:hover {
+  background: var(--btn-dark-hover);
+}
+
+
+.alertas {
+  color: #fff;
+  text-align: center;
+  background: #79ce;
+  padding: 10px;
+  display: none;
+}
+
+#progressBar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+#status {
+  border-radius: 10px;
+  width: 33%;
+  height: 20px;
+  background-color: var(--primary-color);
+}
+
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content{
+  background-color: #f4f4f4;
+  margin: 5% auto;
+  width: 40%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.modal-header h2, .modal-footer h3{
+  margin: 0;
+}
+
+.modal-header{
+  background: var(--btn-done);
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.modal-body{
+  padding: 10px 20px;
+}
+
+.modal-footer{
+  background: var(--btn-done);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.closeBtn {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.closeBtn:hover,.closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen{
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .container.grid {
+    grid-template-columns: 1fr;
+    padding: 0 5px;
+    background: #ccc;
+  }
+
+  .scrum-board {
+    padding: 0 5px;
+  }
+
+  .scrum-board .card {
+    border: none;
+  }
+
+}
