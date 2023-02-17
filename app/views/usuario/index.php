@@ -1,214 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="scrum.css"> -->
-  <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/basic.css">
-  <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/util.css">
-  <!-- <script src="app.js"></script> -->
-
-
-  <title>dashboard</title>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="<?php echo URLROOT; ?>/css/main.css">
+	<title> <?php echo APPNAME ?> </title>
 </head>
 <body>
-<div class="container grid">
-  <div class="scrum-board flex-col backlog">
-    <input type="submit" id="modalBtn" class="btn btn-green" value="<?php echo $_SESSION['user_nombre']; ?>">
-    <a href="<?php echo URLROOT;?>/users/logout" class="btn btn-green"> Cerrar SESSION</a>
-    <h2>Proyecto: LXDE Blog</h2>
+	<div id="wrapper" class="flex flex-col w-full mx-auto min-h-screen">
 
-    <div class="flex">
-      <h3>Backlog</h3>
-      <input type="submit" id="modalBtn" class="btn btn-green" value="Add Task">
-    </div>
+		<nav id="custom-navbar" class="flex p-1 bg-primary text-xl justify-around">
+			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold"> <?php echo APPNAME; ?> </a>
+			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Pending Projects: 06</a>
+			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Completed Projects: 04</a>
+			<a href="#" class="bg-cta hover:bg-primaryLight hover:text-white hover:font-bold"><?php echo $_SESSION['user_nombre']; ?></a>
+		</nav>
+		
+		<div class="grid gap-4 grid-cols-3 p-4 ">
 
-    <div class="alertas">message has been send</div>
+			<div class="flex flex-col p-3 rounded-xl border border-l-4 shadow-md border-dark">
+				<div class="flex justify-between text-primary font-bold text-2xl">
+					<h3>Proyecto LXDE Blog</h3>
+					<button class="rounded-xl bg-cta border"><a href="<?php echo URLROOT; ?>/usuarios/panel">Go to </a> </button>
+				</div>
+				<div class="flex justify-between px-2 py-1">
+					<p>Sprint 01</p>
+					<p>Stories: 5</p>
+					<p>Estimated: 16hrs</p>
+					<button>Go to</button>
+				</div>
+				<div class="flex justify-between px-2 py-1">
+					<p>Sprint 02</p>
+					<p>Stories: 10</p>
+					<p>Estimated: 34hrs</p>
+					<button>Go to</button>
+				</div>
+			</div>
 
-    <div class="task-list">
-      
-    </div>
+			<div class="flex flex-col p-3 rounded-xl border border-l-4 shadow-md border-dark">
+				<div class="flex justify-between text-primary font-bold text-2xl">
+					<h3>Proyecto LXDE Blog</h3>
+					<button class="rounded-xl bg-cta border">Go to </button>
+				</div>
+				<div class="flex justify-between px-2 py-1">
+					<p>Sprint 01</p>
+					<p>Stories: 5</p>
+					<p>Estimated: 16hrs</p>
+					<button>Go to</button>
+				</div>
+				<div class="flex justify-between px-2 py-1">
+					<p>Sprint 02</p>
+					<p>Stories: 10</p>
+					<p>Estimated: 34hrs</p>
+					<button>Go to</button>
+				</div>
+			</div>
 
-    <div class="card">
-      <div class="card-head">
-        <p>Id: 01 </p>
-        <p>Media</p>
-        <p>02 hr</p>
-      </div>
-      <div class="card-body">
-        <p>Titulo de Story Lorem ipsum dolor sit, amet .</p>
-        <p>Descipcion Lorem ipsum dolor sit amet. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, rerum.</p>
-      </div>
+			<div class="flex flex-col p-3 rounded-xl border border-l-4 shadow-md border-dark">
+				<div class="flex justify-between text-primary font-bold text-2xl">
+					<h3>Proyecto LXDE Blog</h3>
+					<button class="rounded-xl bg-cta border">Go to </button>
+				</div>
+				<div class="flex justify-between px-2 py-1">
+					<p>Sprint 01</p>
+					<p>Stories: 5</p>
+					<p>Estimated: 16hrs</p>
+					<button>Go to</button>
+				</div>
+				<div class="flex justify-between px-2 py-1">
+					<p>Sprint 02</p>
+					<p>Stories: 10</p>
+					<p>Estimated: 34hrs</p>
+					<button>Go to</button>
+				</div>
+			</div>
 
-      <div class="card-footer">
-        <a href="#"><svg><use href="icons.svg#log"></use></svg></a>
-        <a href="#"><svg><use href="icons.svg#in-progress"></use></svg></a>
-        <a href="#" id="done"><svg><use href="icons.svg#done"></use></svg></a>
-        <a href="#" id="archived"><svg><use href="icons.svg#archive"></use></svg></a>
-      </div>
-    </div>
+		</div>
 
-    <div class="card">
-      <div class="card-head">
-        <p>Id: 01 </p>
-        <p>Media</p>
-        <p>02 hr</p>
-      </div>
-      <div class="card-body">
-        <p>Titulo de Story Lorem ipsum dolor sit, amet .</p>
-        <p>Descipcion Lorem ipsum dolor sit amet. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, rerum.</p>
-      </div>
-
-      <div class="card-footer">
-        <a href="#"><svg><use href="icons.svg#log"></use></svg></a>
-        <a href="#"><svg><use href="icons.svg#in-progress"></use></svg></a>
-        <a href="#" id="done"><svg><use href="icons.svg#done"></use></svg></a>
-        <a href="#" id="archived"><svg><use href="icons.svg#archive"></use></svg></a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <p>Id: 01 </p>
-        <p>Media</p>
-        <p>02 hr</p>
-      </div>
-      <div class="card-body">
-        <p>Titulo de Story Lorem ipsum dolor sit, amet .</p>
-        <p>Descipcion Lorem ipsum dolor sit amet. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, rerum.</p>
-      </div>
-
-      <div class="card-footer">
-        <a href=""><svg><use href="icons.svg#log"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#in-progress"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#done"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#archive"></use></svg></a>
-      </div>
-    </div>
-
-
-  </div>
-
-  <div class="scrum-board flex-col in-progress">
-    <h3>In progress</h3>
-    <div class="card">
-      <div class="card-head">
-        <p>Id: 01 </p>
-        <p>Media</p>
-        <p>02 hr</p>
-      </div>
-      <div class="card-body">
-        <p>Titulo de Story Lorem ipsum dolor sit, amet .</p>
-        <p>Descipcion Lorem ipsum dolor sit amet. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, rerum.</p>
-      </div>
-
-      <div class="card-footer">
-        <a href=""><svg><use href="icons.svg#log"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#in-progress"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#done"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#archive"></use></svg></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="scrum-board flex-col done">
-    <h3>Done</h3>
-    <div class="card">
-      <div class="card-head">
-        <p>Id: 01 </p>
-        <p>Media</p>
-        <p>02 hr</p>
-      </div>
-      <div class="card-body">
-        <p>Titulo de Story Lorem ipsum dolor sit, amet .</p>
-        <p>Descipcion Lorem ipsum dolor sit amet. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, rerum.</p>
-      </div>
-
-      <div class="card-footer">
-        <a href=""><svg><use href="icons.svg#log"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#in-progress"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#done"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#archive"></use></svg></a>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="scrum-board flex-col archive">
-    <h3>Archive</h3>
-        <div class="card">
-      <div class="card-head">
-        <p>Id: 01 </p>
-        <p>Media</p>
-        <p>02 hr</p>
-      </div>
-      <div class="card-body">
-        <p>Titulo de Story Lorem ipsum dolor sit, amet .</p>
-        <p>Descipcion Lorem ipsum dolor sit amet. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, rerum.</p>
-      </div>
-
-      <div class="card-footer">
-        <a href=""><svg><use href="icons.svg#log"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#in-progress"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#done"></use></svg></a>
-        <a href=""><svg><use href="icons.svg#archive"></use></svg></a>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-<div id="simpleModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="closeBtn">&times;</span>
-        <h2>Add Task</h2> 
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-        <form>
-            <div class="input-row">
-              <div class="input-group small">
-                <label for="">Story ID</label>
-                <input id="story" placeholder="" type="text" required>
-              </div>
-              <div class="input-group small">
-                <label for="">Priority</label>
-                <input id="priority" placeholder="" type="text" required>
-              </div>
-              <div class="input-group small">
-                <label for="">Estim. Time</label>
-                <input id="estimate" placeholder="" type="text" required>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="">Title </label>
-              <input id="title" placeholder="" type="text" required>
-            </div>
-            <div class="input-group">
-              <label for="">Description</label>
-              <input id="description" placeholder="" type="text" required>
-              <input type="submit" class="formBtn" value="Agregar">
-            </div>
-          
-        </form>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <h3>modal footer</h3>
-      </div>
-    </div>
-  </div>
-
-
-<!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> -->
-
-<!-- <script src="scum-move.js"></script>
-<script src="modal.js"></script>
-<script src="db.js"></script> -->
-
+		<footer class="w-full mt-auto bg-primaryDark">
+			<div class="text-center">
+				<?php echo APPNAME; ?>
+			</div>
+		</footer>
+	</div>
 </body>
 </html>

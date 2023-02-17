@@ -12,5 +12,13 @@
 			}
 		}
 
+		public function panel() {
+			if (userLoggedIn()) {
+				$this->view('usuario/panel');
+			} else {
+				$this->view('pages/login');
+			}
+		}
+
 	}
 ?>

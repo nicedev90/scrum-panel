@@ -13,6 +13,6 @@ CREATE TABLE usuarios (
 	PRIMARY KEY (id)
 )ENGINE=INNODB;
 
-INSERT INTO usuarios (nombre, usuario, email, rol) VALUES 
+INSERT INTO usuarios (nombre, usuario, email, password, rol) VALUES 
 	('Nilton', 'user1', 'nip2712@gmail.com', '123', 'usuario'),
 	('Mario', 'user2', 'mar@g.com', '123', 'usuario');
