@@ -20,5 +20,13 @@
 			}
 		}
 
+		public function calcular() {
+			if (userLoggedIn()) {
+				$this->view('usuario/calcular');
+			} else {
+				$this->view('pages/login');
+			}
+		}
+
 	}
 ?>

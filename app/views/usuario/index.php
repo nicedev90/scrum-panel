@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="<?php echo URLROOT; ?>/css/main.css">
 	<title> <?php echo APPNAME ?> </title>
 </head>
@@ -16,64 +17,341 @@
 			<a href="#" class="bg-cta hover:bg-primaryLight hover:text-white hover:font-bold"><?php echo $_SESSION['user_nombre']; ?></a>
 		</nav>
 		
-		<div class="grid gap-4 grid-cols-3 p-4 ">
+		<div class="grid gap-8 grid-cols-2 p-4 ">
 
-			<div class="flex flex-col p-3 rounded-xl border border-l-4 shadow-md border-dark">
-				<div class="flex justify-between text-primary font-bold text-2xl">
-					<h3>Proyecto LXDE Blog</h3>
+			<div class="flex p-3 space-x-2  rounded-lg border border-l-4 border-primaryDark bg-neutralLight shadow-lg">
+
+				<div class="flex flex-col space-y-2 w-1/2 justify-between ">
+
+					<div class="flex justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<h2 class="text-lg font-bold"> LXDE proyecto con javascript </h2 class="text-xl">
+						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+								<i class="fas fa-arrow-up-right-from-square"></i>
+							</a>
+							
+						</div>
+					</div>
+
+
+					<div class="grid grid-cols-4 gap-4 p-2 rounded-lg hover:bg-neutral">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+								<i class="fa-brands fa-square-js fa-2x"></i>
+							</a>
+							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+								<i class="fa-brands fa-react fa-2x"></i>
+							</a>
+							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+								<i class="fa-brands fa-telegram fa-2x"></i>
+							</a>
+						
+						<a href="<?php echo URLROOT; ?>/usuarios/panel" class="text-cta">
+							<i class="fa-brands fa-github fa-2x"></i>
+						</a>
+
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-php fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel" class="text-cta">
+							<i class="fa-brands fa-html5 fa-2x "></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-telegram fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-php fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-linkedin fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-wordpress fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-docker fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-android fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-shopify fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-codepen fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-python fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-linux fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-node fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-java fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-discord fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-ubuntu fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-css3 fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-git fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-sass fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-node-js fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-laravel fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-bitcoin fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-bootstrap fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fa-brands fa-angular fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-file fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-clipboard fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-clock fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-film fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-gear fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-lock fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-tag fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-camera fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-address-book fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-layer-group fa-2x"></i>
+						</a>
+
+						<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<i class="fas fa-check fa-2x"></i>
+						</a>
+					</div>
+
+					
+
+					<div class="bg-primary border text-dark">
+						Total de horas realizadas
+					</div>
+
+				</div>
+
+				<div class="flex w-1/2 flex-col text-sm text-dark">
+
+
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</button>
+					</div>
+
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+								<i class="fas fa-arrow-up-right-from-square"></i>
+							</a>
+							
+						</div>
+					</div>
+
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+								<i class="fa-solid fa-arrow-up-right-from-square"></i>
+							</a>
+							
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="flex p-3 space-x-2 rounded-lg border border-l-4 border-dark shadow-lg">
+
+				<div class="flex flex-col w-1/2  bg-neutral	 justify-between text-primary font-bold text-xl">
+					<div class="flex justify-around px-2 py-1 hover:bg-neutral">
+						<h3> LXDE proyecto de javascript</h3>
+						<button><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+					</div>
 					<button class="rounded-xl bg-cta border"><a href="<?php echo URLROOT; ?>/usuarios/panel">Go to </a> </button>
+					<div class="bg-primary border text-dark">
+						Total de horas realizadas
+					</div>
 				</div>
-				<div class="flex justify-between px-2 py-1">
-					<p>Sprint 01</p>
-					<p>Stories: 5</p>
-					<p>Estimated: 16hrs</p>
-					<button>Go to</button>
-				</div>
-				<div class="flex justify-between px-2 py-1">
-					<p>Sprint 02</p>
-					<p>Stories: 10</p>
-					<p>Estimated: 34hrs</p>
-					<button>Go to</button>
+
+				<div class="flex w-1/2 flex-col text-sm text-dark">
+
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</button>
+					</div>
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</button>
+					</div>
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</button>
+					</div>
+
+
+
 				</div>
 			</div>
 
-			<div class="flex flex-col p-3 rounded-xl border border-l-4 shadow-md border-dark">
-				<div class="flex justify-between text-primary font-bold text-2xl">
-					<h3>Proyecto LXDE Blog</h3>
-					<button class="rounded-xl bg-cta border">Go to </button>
+			<div class="flex p-3 space-x-2 rounded-lg border border-l-4 border-dark shadow-lg">
+
+				<div class="flex flex-col w-1/2  bg-neutral	 justify-between text-primary font-bold text-xl">
+					<div class="flex justify-around px-2 py-1">
+						<h3> LXDE proyecto de javascript</h3>
+						<button><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+					</div>
+					<button class="rounded-xl bg-cta border"><a href="<?php echo URLROOT; ?>/usuarios/panel">Go to </a> </button>
+					<div class="bg-primary border text-dark">
+						Total de horas realizadas
+					</div>
 				</div>
-				<div class="flex justify-between px-2 py-1">
-					<p>Sprint 01</p>
-					<p>Stories: 5</p>
-					<p>Estimated: 16hrs</p>
-					<button>Go to</button>
-				</div>
-				<div class="flex justify-between px-2 py-1">
-					<p>Sprint 02</p>
-					<p>Stories: 10</p>
-					<p>Estimated: 34hrs</p>
-					<button>Go to</button>
+
+				<div class="flex w-1/2 flex-col text-sm text-dark">
+
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</button>
+					</div>
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</button>
+					</div>
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</button>
+					</div>
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+								<i class="fa-solid fa-arrow-up-right-from-square"></i>
+							</a>
+							
+						</div>
+					</div>
+
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p>Sprint 02</p>
+						<p>Stories: 10</p>
+						<p>Estim: 34hrs</p>
+						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+								<i class="fa-solid fa-arrow-up-right-from-square"></i>
+							</a>
+							
+						</div>
+					</div>
+
+
 				</div>
 			</div>
 
-			<div class="flex flex-col p-3 rounded-xl border border-l-4 shadow-md border-dark">
-				<div class="flex justify-between text-primary font-bold text-2xl">
-					<h3>Proyecto LXDE Blog</h3>
-					<button class="rounded-xl bg-cta border">Go to </button>
-				</div>
-				<div class="flex justify-between px-2 py-1">
-					<p>Sprint 01</p>
-					<p>Stories: 5</p>
-					<p>Estimated: 16hrs</p>
-					<button>Go to</button>
-				</div>
-				<div class="flex justify-between px-2 py-1">
-					<p>Sprint 02</p>
-					<p>Stories: 10</p>
-					<p>Estimated: 34hrs</p>
-					<button>Go to</button>
-				</div>
-			</div>
+
 
 		</div>
 

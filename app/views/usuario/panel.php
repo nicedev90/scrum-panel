@@ -17,9 +17,9 @@
 			<a href="#" class="bg-cta hover:bg-primaryLight hover:text-white hover:font-bold"><?php echo $_SESSION['user_nombre']; ?></a>
 		</nav>
 		
-		<div class="grid grid-cols-2 gap-4 p-2">
+		<div class="grid grid-cols-3 h-96 gap-4 p-2">
 
-			<div class="flex flex-col h-96 border rounded-xl px-2">
+			<div class="flex flex-col border rounded-xl px-2">
 				<h3>RESUMEN </h3>
 				<div id="card">
 					<div id="card-header"></div>
@@ -41,7 +41,18 @@
 				</div>
 			</div>
 
-			<div class="flex flex-col h-96 border rounded-xl px-2">
+			<div class="flex flex-col border rounded-xl px-2">
+				<h3>BurnDown Chart </h3>
+				<div id="card">
+					<div id="card-header"></div>
+					<div id="card-body">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis illum temporibus impedit, vero minima, eum fugiat aperiam praesentium incidunt voluptates fuga cum, excepturi voluptatum quibusdam odit eligendi odio, nisi.
+					</div>
+					<div id="card-footer"></div>
+				</div>
+			</div>
+
+			<div class="flex flex-col border rounded-xl px-2">
 				<h3>BurnDown Chart </h3>
 				<div id="card">
 					<div id="card-header"></div>
@@ -54,22 +65,46 @@
 
 		</div>
 
-		<div class="flex justify-between p-4">
+		<div class="grid grid-cols-4 gap-4 p-2">
 
-			<div class="px-4">
-				<h3>SPRINT 01</h3>
+			<div class="p-4 border rounded-xl">
+				<div class="flex justify-between">
+					<h3>SPRINT 01</h3>
 				<button class="bg-neutral">GO TO</button>
+				</div>
 				<p>total tareas</p>
 				<p>Porcentaje de avance: </p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam facere quod odio dolor cupiditate consequuntur enim, dolorum at voluptatem incidunt qui, tempore beatae perferendis minima nesciunt harum assumenda quo amet?</div>
+				<p>Pending hours: 49 hrs </p>
+			</div>
 
-			<div class="px-4">
-				<h3>SPRINT 02</h3>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam facere quod odio dolor cupiditate consequuntur enim, dolorum at voluptatem incidunt qui, tempore beatae perferendis minima nesciunt harum assumenda quo amet?</div>
+			<div class="p-4 border rounded-xl bg-cta">
+				<div class="flex justify-between">
+					<h3>SPRINT 03</h3>
+				<button class="bg-neutral">GO TO</button>
+				</div>
+				<p>total tareas</p>
+				<p>Porcentaje de avance: </p>
+				<p>Pending hours: 49 hrs </p>
+			</div>
 
-			<div class="px-4 bg-cta">
-				<h3>SPRINT 03</h3>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam facere quod odio dolor cupiditate consequuntur enim, dolorum at voluptatem incidunt qui, tempore beatae perferendis minima nesciunt harum assumenda quo amet?
+			<div class="p-4 border rounded-xl bg-cta">
+				<div class="flex justify-between">
+					<h3>SPRINT 03</h3>
+				<button class="bg-neutral">GO TO</button>
+				</div>
+				<p>total tareas</p>
+				<p>Porcentaje de avance: </p>
+				<p>Pending hours: 49 hrs </p>
+			</div>
+
+			<div class="p-4 border rounded-xl bg-cta">
+				<div class="flex justify-between">
+					<h3>SPRINT 03</h3>
+				<button class="bg-neutral">GO TO</button>
+				</div>
+				<p>total tareas</p>
+				<p>Porcentaje de avance: </p>
+				<p>Pending hours: 49 hrs </p>
 			</div>
 
 		</div>
