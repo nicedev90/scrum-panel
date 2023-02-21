@@ -16,15 +16,17 @@
 			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Completed Projects: 04</a>
 			<a href="#" class="bg-cta hover:bg-primaryLight hover:text-white hover:font-bold"><?php echo $_SESSION['user_nombre']; ?></a>
 		</nav>
-		
+		<pre>
+		<?php print_r($data) ?>
+		</pre>
 		<div class="grid gap-8 grid-cols-2 p-4 ">
-
+			<?php foreach($data['projects'] as $row) : ?>
 			<div class="flex p-3 space-x-2  rounded-lg border border-l-4 border-primaryDark bg-neutralLight shadow-lg">
 
 				<div class="flex flex-col space-y-2 w-1/2 justify-between ">
 
 					<div class="flex justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<h2 class="text-lg font-bold"> LXDE proyecto con javascript </h2 class="text-xl">
+						<h2 class="text-lg font-bold"> <?php echo $row->name ?> </h2 class="text-xl">
 						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
 							<a href="<?php echo URLROOT; ?>/usuarios/panel">
 								<i class="fas fa-arrow-up-right-from-square"></i>
@@ -34,7 +36,7 @@
 					</div>
 
 
-					<div class="grid grid-cols-4 gap-4 p-2 rounded-lg hover:bg-neutral">
+					<!-- <div class="grid grid-cols-4 gap-4 p-2 rounded-lg hover:bg-neutral">
 							<a href="<?php echo URLROOT; ?>/usuarios/panel">
 								<i class="fa-brands fa-square-js fa-2x"></i>
 							</a>
@@ -189,12 +191,12 @@
 						<a href="<?php echo URLROOT; ?>/usuarios/panel">
 							<i class="fas fa-check fa-2x"></i>
 						</a>
-					</div>
+					</div> -->
 
 					
 
 					<div class="bg-primary border text-dark">
-						Total de horas realizadas
+						Total de horas realizadas <?php echo $row->hours ?> 
 					</div>
 
 				</div>
@@ -239,118 +241,7 @@
 				</div>
 			</div>
 
-			<div class="flex p-3 space-x-2 rounded-lg border border-l-4 border-dark shadow-lg">
-
-				<div class="flex flex-col w-1/2  bg-neutral	 justify-between text-primary font-bold text-xl">
-					<div class="flex justify-around px-2 py-1 hover:bg-neutral">
-						<h3> LXDE proyecto de javascript</h3>
-						<button><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-					</div>
-					<button class="rounded-xl bg-cta border"><a href="<?php echo URLROOT; ?>/usuarios/panel">Go to </a> </button>
-					<div class="bg-primary border text-dark">
-						Total de horas realizadas
-					</div>
-				</div>
-
-				<div class="flex w-1/2 flex-col text-sm text-dark">
-
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</button>
-					</div>
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</button>
-					</div>
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</button>
-					</div>
-
-
-
-				</div>
-			</div>
-
-			<div class="flex p-3 space-x-2 rounded-lg border border-l-4 border-dark shadow-lg">
-
-				<div class="flex flex-col w-1/2  bg-neutral	 justify-between text-primary font-bold text-xl">
-					<div class="flex justify-around px-2 py-1">
-						<h3> LXDE proyecto de javascript</h3>
-						<button><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-					</div>
-					<button class="rounded-xl bg-cta border"><a href="<?php echo URLROOT; ?>/usuarios/panel">Go to </a> </button>
-					<div class="bg-primary border text-dark">
-						Total de horas realizadas
-					</div>
-				</div>
-
-				<div class="flex w-1/2 flex-col text-sm text-dark">
-
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</button>
-					</div>
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</button>
-					</div>
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</button>
-					</div>
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<a href="<?php echo URLROOT; ?>/usuarios/panel">
-								<i class="fa-solid fa-arrow-up-right-from-square"></i>
-							</a>
-							
-						</div>
-					</div>
-
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<a href="<?php echo URLROOT; ?>/usuarios/panel">
-								<i class="fa-solid fa-arrow-up-right-from-square"></i>
-							</a>
-							
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-
+			<?php endforeach; ?>
 
 
 		</div>

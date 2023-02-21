@@ -42,11 +42,11 @@
 			</div>
 
 			<div class="flex flex-col border rounded-xl px-2">
-				<h3>BurnDown Chart </h3>
+				<h3>PROTOTIPO </h3>
 				<div id="card">
 					<div id="card-header"></div>
 					<div id="card-body">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis illum temporibus impedit, vero minima, eum fugiat aperiam praesentium incidunt voluptates fuga cum, excepturi voluptatum quibusdam odit eligendi odio, nisi.
+						IMAGEN REFERENCIAL PROTOTIPO
 					</div>
 					<div id="card-footer"></div>
 				</div>

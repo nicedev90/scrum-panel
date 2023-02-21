@@ -6,11 +6,32 @@
 
 		public function index() {
 			if (userLoggedIn()) {
-				$this->view('usuario/index');
+
+				$projects = $this->getProjects();
+				$id = $projects[0]->id;
+
+				$sprints = $this->getSprints($id);
+
+				$data = [
+					'projects' => $projects,
+					'sprints' => $sprints
+				];
+				$this->view('usuario/index',$data);
 			} else {
 				$this->view('pages/login');
 			}
 		}
+
+		public function getProjects() {
+			$projects = $this->usuario->getProjects();
+			return $projects;
+		}
+
+		public function getSprints($id) {
+			$projects = $this->usuario->getSprints($id);
+			return $projects;
+		}
+
 
 		public function panel() {
 			if (userLoggedIn()) {
