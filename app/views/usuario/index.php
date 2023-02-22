@@ -16,27 +16,76 @@
 			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Completed Projects: 04</a>
 			<a href="#" class="bg-cta hover:bg-primaryLight hover:text-white hover:font-bold"><?php echo $_SESSION['user_nombre']; ?></a>
 		</nav>
-		<pre>
+		<!-- <pre>
 		<?php print_r($data) ?>
-		</pre>
+		</pre> -->
 		<div class="grid gap-8 grid-cols-2 p-4 ">
 			<?php foreach($data['projects'] as $row) : ?>
+
 			<div class="flex p-3 space-x-2  rounded-lg border border-l-4 border-primaryDark bg-neutralLight shadow-lg">
 
 				<div class="flex flex-col space-y-2 w-1/2 justify-between ">
 
 					<div class="flex justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<h2 class="text-lg font-bold"> <?php echo $row->name ?> </h2 class="text-xl">
+						<h2 class="text-lg font-bold"> <?php echo $row->name ?> 
+						</h2>
 						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<a href="<?php echo URLROOT; ?>/usuarios/panel">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel/<?php echo $row->id ?>">
 								<i class="fas fa-arrow-up-right-from-square"></i>
 							</a>
 							
 						</div>
 					</div>
 
+					<a href="<?php echo URLROOT; ?>/usuarios/panel">
+						Lenguajes: <?php echo $row->languages ?>
+						<i class="fa-brands fa-php fa-2x"></i>
+					</a>
 
-					<!-- <div class="grid grid-cols-4 gap-4 p-2 rounded-lg hover:bg-neutral">
+					<div class="bg-primary border text-dark">
+						Total de horas: <?php echo $row->hours ?> 
+					</div>
+
+				</div>
+			
+
+				<div class="flex w-1/2 flex-col text-sm text-dark">
+
+					<?php for ($i=0; $i < count($data['sprints'][$row->id]); $i++) : ?>
+					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
+						<p> Sprint <?php echo $data['sprints'][$row->id][$i]->sprint ?> </p>
+					<p>Stories: 0<?php echo $data['sprints'][$row->id][$i]->stories ?></p>
+						<p>Estim: <?php echo $data['sprints'][$row->id][$i]->hours ?> hrs</p>
+						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<i class="fa-solid fa-arrow-up-right-from-square"></i>
+						</button>
+					</div>
+				<?php endfor; ?>
+
+
+				</div>
+
+					
+			</div>
+
+<?php endforeach; ?>
+		</div>
+
+				
+	</div>
+
+
+
+		<footer class="w-full mt-auto bg-primaryDark">
+			<div class="text-center">
+				<?php echo APPNAME; ?>
+			</div>
+		</footer>
+	</div>
+
+
+
+	<!-- <div class="grid grid-cols-4 gap-4 p-2 rounded-lg hover:bg-neutral">
 							<a href="<?php echo URLROOT; ?>/usuarios/panel">
 								<i class="fa-brands fa-square-js fa-2x"></i>
 							</a>
@@ -192,65 +241,5 @@
 							<i class="fas fa-check fa-2x"></i>
 						</a>
 					</div> -->
-
-					
-
-					<div class="bg-primary border text-dark">
-						Total de horas realizadas <?php echo $row->hours ?> 
-					</div>
-
-				</div>
-
-				<div class="flex w-1/2 flex-col text-sm text-dark">
-
-
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</button>
-					</div>
-
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<a href="<?php echo URLROOT; ?>/usuarios/panel">
-								<i class="fas fa-arrow-up-right-from-square"></i>
-							</a>
-							
-						</div>
-					</div>
-
-					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p>Sprint 02</p>
-						<p>Stories: 10</p>
-						<p>Estim: 34hrs</p>
-						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<a href="<?php echo URLROOT; ?>/usuarios/panel">
-								<i class="fa-solid fa-arrow-up-right-from-square"></i>
-							</a>
-							
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-
-			<?php endforeach; ?>
-
-
-		</div>
-
-		<footer class="w-full mt-auto bg-primaryDark">
-			<div class="text-center">
-				<?php echo APPNAME; ?>
-			</div>
-		</footer>
-	</div>
 </body>
 </html>

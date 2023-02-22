@@ -47,7 +47,7 @@ REFERENCES projects (id)
 CREATE TABLE stories (
 id INT NOT NULL AUTO_INCREMENT,
 project_id INT NOT NULL,
-sprint_id INT NOT NULL,
+sprint_num INT NOT NULL,
 title VARCHAR(50) NOT NULL,
 details VARCHAR(150) NOT NULL,
 hours DECIMAL(4,2) NOT NULL,
@@ -56,9 +56,9 @@ PRIMARY KEY (id),
 CONSTRAINT fk_project_story
 FOREIGN KEY (project_id)
 REFERENCES projects (id),
-CONSTRAINT fk_sprint_id
-FOREIGN KEY (sprint_id)
-REFERENCES sprints (id)
+CONSTRAINT fk_sprint_num
+FOREIGN KEY (sprint_num)
+REFERENCES sprints (sprint)
 )ENGINE=INNODB;
 
 CREATE TABLE tasks (

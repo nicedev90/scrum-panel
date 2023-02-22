@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="<?php echo URLROOT; ?>/css/main.css">
 	<title> <?php echo APPNAME ?> </title>
 </head>
@@ -66,46 +67,24 @@
 		</div>
 
 		<div class="grid grid-cols-4 gap-4 p-2">
-
+<?php foreach($data['sprints'] as $row) : ?>
 			<div class="p-4 border rounded-xl">
 				<div class="flex justify-between">
-					<h3>SPRINT 01</h3>
-				<button class="bg-neutral">GO TO</button>
+					<h3>SPRINT <?php echo $row->sprint_num ?></h3>
+						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel/<?php echo $row->project_id ?>/<?php echo $row->sprint_num ?>">
+								<i class="fas fa-arrow-up-right-from-square"></i>
+							</a>
+							
+						</div>
 				</div>
-				<p>total tareas</p>
+				<p>Stories: <?php echo $row->stories ?></p>
+				<p>Total horas: <?php echo $row->hours ?></p>
 				<p>Porcentaje de avance: </p>
 				<p>Pending hours: 49 hrs </p>
 			</div>
+<?php endforeach; ?>
 
-			<div class="p-4 border rounded-xl bg-cta">
-				<div class="flex justify-between">
-					<h3>SPRINT 03</h3>
-				<button class="bg-neutral">GO TO</button>
-				</div>
-				<p>total tareas</p>
-				<p>Porcentaje de avance: </p>
-				<p>Pending hours: 49 hrs </p>
-			</div>
-
-			<div class="p-4 border rounded-xl bg-cta">
-				<div class="flex justify-between">
-					<h3>SPRINT 03</h3>
-				<button class="bg-neutral">GO TO</button>
-				</div>
-				<p>total tareas</p>
-				<p>Porcentaje de avance: </p>
-				<p>Pending hours: 49 hrs </p>
-			</div>
-
-			<div class="p-4 border rounded-xl bg-cta">
-				<div class="flex justify-between">
-					<h3>SPRINT 03</h3>
-				<button class="bg-neutral">GO TO</button>
-				</div>
-				<p>total tareas</p>
-				<p>Porcentaje de avance: </p>
-				<p>Pending hours: 49 hrs </p>
-			</div>
 
 		</div>
 

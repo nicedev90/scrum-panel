@@ -8,14 +8,19 @@
 			if (userLoggedIn()) {
 
 				$projects = $this->getProjects();
-				$id = $projects[0]->id;
 
-				$sprints = $this->getSprints($id);
+				$sprints = [];
+
+				for ($i = 0; $i < count($projects); $i++) {
+					$sprints[$projects[$i]->id] = $this->getSprints($projects[$i]->id);
+				}
+
 
 				$data = [
 					'projects' => $projects,
 					'sprints' => $sprints
 				];
+
 				$this->view('usuario/index',$data);
 			} else {
 				$this->view('pages/login');
@@ -33,12 +38,56 @@
 		}
 
 
-		public function panel() {
+		public function panel($id = null, $sprint = null) {
 			if (userLoggedIn()) {
-				$this->view('usuario/panel');
+
+				if (is_null($sprint)) {
+					$project = $this->getProjectById($id);
+
+					$sprints = $this->getSprints($id);
+
+					$data = [
+						'projects' => $project,
+						'sprints' => $sprints
+					];
+
+					$this->view('usuario/panel',$data);
+
+				} else {
+					$project = $this->getProjectById($id)->name;
+
+					$stories = $this->getStoriesBySprint($id,$sprint);
+
+					$tasks = $this->getTasksBySprint($id,$sprint);
+
+					$data = [
+						'project' => $project,
+						'sprint' => $sprint,
+						'stories' => $stories,
+						'tasks' => $tasks
+					];
+
+					$this->view('usuario/sprint',$data);
+
+				}
 			} else {
 				$this->view('pages/login');
 			}
+		}
+
+		public function getProjectById($id) {
+			$project = $this->usuario->getProjectById($id);
+			return $project;
+		}
+
+		public function getStoriesBySprint($project,$sprint) {
+			$stories = $this->usuario->getStoriesBySprint($project,$sprint);
+			return $stories;
+		}
+
+		public function getTasksBySprint($project,$sprint) {
+			$tasks = $this->usuario->getTasksBySprint($project,$sprint);
+			return $tasks;
 		}
 
 		public function calcular() {
