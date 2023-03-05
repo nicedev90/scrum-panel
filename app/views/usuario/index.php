@@ -11,12 +11,14 @@
 	<div id="wrapper" class="flex flex-col w-full mx-auto min-h-screen">
 
 		<nav id="custom-navbar" class="flex p-1 bg-primary text-xl justify-around">
-			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold"> <?php echo APPNAME; ?> </a>
+
+			<a href="<?php echo URLROOT; ?>/usuarios/index" class="hover:bg-primaryLight hover:text-white hover:font-bold"> <?php echo APPNAME; ?> </a>
 			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Pending Projects: 06</a>
 			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Completed Projects: 04</a>
+			<a href="<?php echo URLROOT; ?>/usuarios/calcular" class="hover:bg-primaryLight hover:text-white hover:font-bold">Cotizar</a>
 			<a href="#" class="bg-cta hover:bg-primaryLight hover:text-white hover:font-bold"><?php echo $_SESSION['user_nombre']; ?></a>
 		</nav>
-		<!-- <pre>
+<!-- 		<pre>
 		<?php print_r($data) ?>
 		</pre> -->
 		<div class="grid gap-8 grid-cols-2 p-4 ">
@@ -53,12 +55,15 @@
 
 					<?php for ($i=0; $i < count($data['sprints'][$row->id]); $i++) : ?>
 					<div class="flex items-center justify-between px-2 py-1 rounded-lg hover:bg-neutral">
-						<p> Sprint <?php echo $data['sprints'][$row->id][$i]->sprint ?> </p>
+						<p> Sprint <?php echo $data['sprints'][$row->id][$i]->sprint_num ?> </p>
 					<p>Stories: 0<?php echo $data['sprints'][$row->id][$i]->stories ?></p>
 						<p>Estim: <?php echo $data['sprints'][$row->id][$i]->hours ?> hrs</p>
-						<button class="rounded-full px-2 text-lg hover:bg-ctaLight">
-							<i class="fa-solid fa-arrow-up-right-from-square"></i>
-						</button>
+						<div class="rounded-full px-2 text-lg hover:bg-ctaLight">
+							<a href="<?php echo URLROOT; ?>/usuarios/panel/<?php echo $data['sprints'][$row->id][$i]->project_id; ?>/<?php echo $data['sprints'][$row->id][$i]->sprint_num ?>">
+								<i class="fas fa-arrow-up-right-from-square"></i>
+							</a>
+							
+						</div>
 					</div>
 				<?php endfor; ?>
 
@@ -241,5 +246,7 @@
 							<i class="fas fa-check fa-2x"></i>
 						</a>
 					</div> -->
+
+	<script src="<?php echo URLROOT; ?>/js/main.js"></script>
 </body>
 </html>

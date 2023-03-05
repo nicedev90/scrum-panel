@@ -8,15 +8,24 @@
 	<title> <?php echo APPNAME ?> </title>
 </head>
 <body>
+
+	
+
+
 	<div id="wrapper" class="flex flex-col w-full mx-auto min-h-screen">
 
 		<nav id="custom-navbar" class="flex p-1 bg-primary text-xl justify-around">
-			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Proyecto: Blog LXDE </a>
+			<a href="<?php echo URLROOT; ?>/usuarios/index" class="hover:bg-primaryLight hover:text-white hover:font-bold">Index  </a>
 
+			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Proyecto: <?php echo $data['projects']->name ?> </a>
 			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Progress: 20%</a>
 			<a href="#" class="hover:bg-primaryLight hover:text-white hover:font-bold">Pending Hours: 64 hrs</a>
 			<a href="#" class="bg-cta hover:bg-primaryLight hover:text-white hover:font-bold"><?php echo $_SESSION['user_nombre']; ?></a>
 		</nav>
+
+<!-- 				<pre>
+		<?php print_r($data) ?>
+		</pre> -->
 		
 		<div class="grid grid-cols-3 h-96 gap-4 p-2">
 
@@ -26,6 +35,8 @@
 					<div id="card-header"></div>
 					<div id="card-body">
 						<p>Nombre del proyecto</p>
+						<button id="btn-register" class="px-5 py-2 text-white text-lg rounded-xl bg-cta">new Sprint</button>
+						<button id="btn-register" class="px-5 py-2 text-white text-lg rounded-xl bg-cta">new Story</button>
 						<p>Detalles del proyecto</p>
 						<p>Presupuesto</p>
 						<p>Lenguajes a Usar</p>
@@ -94,5 +105,11 @@
 			</div>
 		</footer>
 	</div>
+
+
+<?php require APPROOT . '/views/usuario/partials/modal_story.php' ?>
+
+	<script src="<?php echo URLROOT; ?>/js/main.js"></script>
+
 </body>
 </html>

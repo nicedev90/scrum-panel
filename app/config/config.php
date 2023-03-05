@@ -7,6 +7,6 @@
 
 	define('APPROOT', dirname(dirname(__FILE__)));
 	// define('URLROOT', 'http://192.168.8.100/scrum-panel');
-	define('URLROOT', 'http://144.22.165.160/scrum-panel');
+	define('URLROOT', 'https://nicedev90.pro/scrum-panel');
 	define('APPNAME', 'Panel Scrum Sys.');
 ?>
